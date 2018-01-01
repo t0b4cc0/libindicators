@@ -14,16 +14,16 @@ namespace MgFx.Indicators
             public double Low;
         }
 
-        List<Candle> OhlcList { get; set; }
+        List<Candle> OhlcList { get; set; } = new List<Candle>();
 
-        public void AddCandle(double hi,double low)
+        public void AddCandle(double hi, double low)
         {
             OhlcList.Add(new Candle() { High = hi, Low = low });
         }
 
         public void AddCandles(double[] hi, double[] low)
         {
-            for(int i = 0; i < hi.Length; i++)
+            for (int i = 0; i < hi.Length; i++)
                 OhlcList.Add(new Candle() { High = hi[i], Low = low[i] });
         }
 
