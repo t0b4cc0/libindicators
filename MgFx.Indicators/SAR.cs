@@ -44,7 +44,7 @@ namespace MgFx.Indicators
             this.MaximumAccelerationFactor = maximumAccelerationFactor;
         }
 
-        public double?[] Calculate()
+        public double[] Calculate()
         {
             // Difference of High and Low
             List<double> differences = new List<double>();
@@ -57,7 +57,7 @@ namespace MgFx.Indicators
             // STDEV of differences ::: TODO: check correctness
             var stDev = Math.Sqrt(differences.Average(z => z * z) - Math.Pow(differences.Average(), 2));
 
-            double?[] sarArr = new double?[OhlcList.Count];
+            double[] sarArr = new double[OhlcList.Count];
 
             double[] highList = OhlcList.Select(x => x.High).ToArray();
             double[] lowList = OhlcList.Select(x => x.Low).ToArray();
