@@ -9,7 +9,7 @@
 
 namespace MgFx.Indicators
 {
-    using CuttingEdge.Conditions;
+//    using CuttingEdge.Conditions;
 
     using MgFx.History;
 
@@ -34,8 +34,8 @@ namespace MgFx.Indicators
         /// <returns>Calculated indicator series.</returns>
         public static double[] Calculate(TimeSeries timeSeries)
         {
-            Condition.Requires(timeSeries, "timeSeries")
-                .IsNotNull();
+            //Condition.Requires(timeSeries, "timeSeries")
+            //    .IsNotNull();
 
             var bop = new double[timeSeries.Open.Length];
             for (var i = 0; i < timeSeries.Open.Length; i++)

@@ -9,7 +9,7 @@
 
 namespace MgFx.Indicators
 {
-    using CuttingEdge.Conditions;
+//    using CuttingEdge.Conditions;
 
     /// <summary>
     /// Momentum Indicator.
@@ -33,11 +33,11 @@ namespace MgFx.Indicators
         /// <returns>Calculated indicator series.</returns>
         public static double[] Calculate(double[] price, int period)
         {
-            Condition.Requires(price, "price")
-                .IsNotEmpty();
-            Condition.Requires(period, "period")
-                .IsGreaterThan(0)
-                .IsLessOrEqual(price.Length);
+            //Condition.Requires(price, "price")
+            //    .IsNotEmpty();
+            //Condition.Requires(period, "period")
+            //    .IsGreaterThan(0)
+            //    .IsLessOrEqual(price.Length);
 
             var momentum = new double[price.Length];
             for (int i = 0; i < period; i++)

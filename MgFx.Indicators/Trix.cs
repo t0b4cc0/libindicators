@@ -9,7 +9,7 @@
 
 namespace MgFx.Indicators
 {
-    using CuttingEdge.Conditions;
+    //using CuttingEdge.Conditions;
 
     /// <summary>
     /// Triple-smoothed Exponential Moving Average Indicator.
@@ -33,11 +33,11 @@ namespace MgFx.Indicators
         /// <returns>Calculated indicator series.</returns>
         public static double[] Calculate(double[] price, int period)
         {
-            Condition.Requires(price, "price")
-                .IsNotEmpty();
-            Condition.Requires(period, "period")
-                .IsGreaterThan(1)
-                .IsLessOrEqual(price.Length);
+            //Condition.Requires(price, "price")
+            //    .IsNotEmpty();
+            //Condition.Requires(period, "period")
+            //    .IsGreaterThan(1)
+            //    .IsLessOrEqual(price.Length);
 
             var trix = new double[price.Length];
             var ema1 = EMA.Calculate(price, period);

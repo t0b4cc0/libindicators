@@ -12,8 +12,6 @@ namespace MgFx.History.Mt5Loader
     using System;
     using System.Text;
 
-    using CuttingEdge.Conditions;
-
     /// <summary>
     /// <c>Metatrader</c> 5 History header format
     /// </summary>
@@ -30,9 +28,9 @@ namespace MgFx.History.Mt5Loader
         /// <param name="bytes"> Bytes buffer from file.</param>
         public MT5Header(byte[] bytes)
         {
-            Condition.Requires(bytes, "bytes")
-                .IsNotNull()
-                .HasLength(Size);
+            //Condition.Requires(bytes, "bytes")
+            //    .IsNotNull()
+            //    .HasLength(Size);
 
             this.Version = BitConverter.ToInt32(bytes, 0);
             this.Copyright = Encoding.ASCII.GetString(bytes, 4, 64);

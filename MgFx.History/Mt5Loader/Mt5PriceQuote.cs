@@ -11,7 +11,7 @@ namespace MgFx.History.Mt5Loader
 {
     using System;
 
-    using CuttingEdge.Conditions;
+    //using CuttingEdge.Conditions;
 
     /// <summary>
     /// <c>Metatrader</c> 5 Single Price Quote Format
@@ -29,9 +29,9 @@ namespace MgFx.History.Mt5Loader
         /// <param name="bytes">Bytes buffer from file.</param>
         public MT5PriceQuote(byte[] bytes)
         {
-            Condition.Requires(bytes, "bytes")
-                .IsNotEmpty()
-                .HasLength(Size);
+            //Condition.Requires(bytes, "bytes")
+            //    .IsNotEmpty()
+            //    .HasLength(Size);
 
             this.Time = UnixTimeStampToDateTime(BitConverter.ToUInt64(bytes, 0));
             this.Open = BitConverter.ToDouble(bytes, 8);

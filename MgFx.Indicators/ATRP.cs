@@ -9,7 +9,7 @@
 
 namespace MgFx.Indicators
 {
-    using CuttingEdge.Conditions;
+//    using CuttingEdge.Conditions;
 
     using MgFx.History;
 
@@ -35,11 +35,11 @@ namespace MgFx.Indicators
         /// <returns>Calculated indicator series.</returns>
         public static double[] Calculate(int period, TimeSeries timeSeries)
         {
-            Condition.Requires(timeSeries, "timeSeries")
-                .IsNotNull();
-            Condition.Requires(period, "period")
-                .IsGreaterThan(0)
-                .IsLessOrEqual(timeSeries.Close.Length);
+            //Condition.Requires(timeSeries, "timeSeries")
+            //    .IsNotNull();
+            //Condition.Requires(period, "period")
+            //    .IsGreaterThan(0)
+            //    .IsLessOrEqual(timeSeries.Close.Length);
 
             var atr = ATR.Calculate(period, timeSeries);
             var atrp = new double[atr.Length];

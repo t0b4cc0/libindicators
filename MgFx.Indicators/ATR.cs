@@ -11,7 +11,7 @@ namespace MgFx.Indicators
 {
     using System;
 
-    using CuttingEdge.Conditions;
+//    using CuttingEdge.Conditions;
 
     using MgFx.History;
 
@@ -37,11 +37,11 @@ namespace MgFx.Indicators
         /// <returns>Calculated indicator series.</returns>
         public static double[] Calculate(int period, TimeSeries timeSeries)
         {
-            Condition.Requires(timeSeries, "timeSeries")
-                .IsNotNull();
-            Condition.Requires(period, "period")
-                .IsGreaterThan(0)
-                .IsLessOrEqual(timeSeries.Close.Length);
+            //Condition.Requires(timeSeries, "timeSeries")
+            //    .IsNotNull();
+            //Condition.Requires(period, "period")
+            //    .IsGreaterThan(0)
+            //    .IsLessOrEqual(timeSeries.Close.Length);
 
             var temp = new double[timeSeries.Close.Length];
             temp[0] = 0;

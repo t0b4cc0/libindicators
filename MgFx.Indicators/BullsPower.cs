@@ -9,7 +9,7 @@
 
 namespace MgFx.Indicators
 {
-    using CuttingEdge.Conditions;
+//    using CuttingEdge.Conditions;
 
     using MgFx.History;
 
@@ -36,13 +36,13 @@ namespace MgFx.Indicators
         /// <returns>Calculated indicator series.</returns>
         public static double[] Calculate(double[] price, int period, TimeSeries timeSeries)
         {
-            Condition.Requires(price, "price")
-                .IsNotEmpty();
-            Condition.Requires(period, "period")
-                .IsGreaterThan(0)
-                .IsLessOrEqual(price.Length);
-            Condition.Requires(timeSeries, "timeSeries")
-                .IsNotNull();
+            //Condition.Requires(price, "price")
+            //    .IsNotEmpty();
+            //Condition.Requires(period, "period")
+            //    .IsGreaterThan(0)
+            //    .IsLessOrEqual(price.Length);
+            //Condition.Requires(timeSeries, "timeSeries")
+            //    .IsNotNull();
 
             var bulls = new double[price.Length];
 

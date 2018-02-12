@@ -9,7 +9,7 @@
 
 namespace MgFx.Indicators
 {
-    using CuttingEdge.Conditions;
+    //using CuttingEdge.Conditions;
 
     /// <summary>
     /// Exponential Moving Average Indicator.

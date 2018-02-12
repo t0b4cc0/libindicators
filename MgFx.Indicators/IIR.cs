@@ -9,7 +9,7 @@
 
 namespace MgFx.Indicators
 {
-    using CuttingEdge.Conditions;
+//    using CuttingEdge.Conditions;
 
     /// <summary>
     /// Infinite Impulse Response Moving Average Indicator.
@@ -32,8 +32,8 @@ namespace MgFx.Indicators
         /// <returns>Calculated indicator series.</returns>
         public static double[] Calculate(double[] price)
         {
-            Condition.Requires(price, "price")
-                .IsNotEmpty();
+            //Condition.Requires(price, "price")
+            //    .IsNotEmpty();
 
             return FIR.Calculate(price, new double[] { 2, 4, 0, 0, -1 });
         }

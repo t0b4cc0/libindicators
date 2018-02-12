@@ -9,7 +9,7 @@
 
 namespace MgFx.Indicators
 {
-    using CuttingEdge.Conditions;
+//    using CuttingEdge.Conditions;
 
     /// <summary>
     /// Awesome Oscillator Indicator.
@@ -32,8 +32,8 @@ namespace MgFx.Indicators
         /// <returns>Calculated indicator series.</returns>
         public static double[] Calculate(double[] price)
         {
-            Condition.Requires(price, "price")
-                .IsNotEmpty();
+            //Condition.Requires(price, "price")
+            //    .IsNotEmpty();
 
             var fastSma = SMA.Calculate(price, 5);
             var slowSma = SMA.Calculate(price, 34);
